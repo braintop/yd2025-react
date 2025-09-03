@@ -6,8 +6,13 @@ function App() {
   let age = 20;
   let isStudent = true;
   let hobbies = ['reading', 'writing', 'coding'];
-
+  function getFullName() {
+    alert(`${firstName} ${lastName}`);
+  }
   //phase 2 - events and methods
+  function handleClick() {
+    alert('Button clicked');
+  }
 
   //phase 3 - html 
   return (
@@ -17,6 +22,10 @@ function App() {
       <p>Age: {age}</p>
       <p>Student: {isStudent ? 'Yes' : 'No'}</p>
       <p>Hobbies: {hobbies.join(', ')}</p>
+
+      <button onClick={handleClick}>Click me</button>
+      <button onClick={getFullName}>Get Full Name</button>
+
     </>
   )
 }
